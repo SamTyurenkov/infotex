@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html>
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+    <TITLE>Сайт media.bigmachinegames.com не настроен на сервере</TITLE>
+    <link rel="stylesheet" href="https://www.ukraine.com.ua/static/parking/style.css" type="text/css" />
+    <script>
+        window.languages = {
+            'en': {
+                'title': 'Website media.bigmachinegames.com not configured on server',
+                'h1': 'Website media.bigmachinegames.com not configured on server',
+                '.message1': 'Website <b>media.bigmachinegames.com</b> is not configured on the hosting server.',
+                '.message2': 'Domain address record points to our server, but this site is not served.<br>If you have recently added a site to your control panel - wait 15 minutes and your site will start working.',
+                '.help_button': 'How can I fix this?',
+            },
+            'pl': {
+                'title': 'Witryna media.bigmachinegames.com nieskonfigurowana na serwerze',
+                'h1': 'Witryna media.bigmachinegames.com nieskonfigurowana na serwerze',
+                '.message1': 'Witryna <b>media.bigmachinegames.com</b> nie jest skonfigurowana na serwerze hostingowym.',
+                '.message2': 'Rekord adresu domeny wskazuje na nasz serwer, ale ta witryna nie jest obsługiwana.<br>Jeśli niedawno dodałeś witrynę do panelu sterowania - poczekaj 15 minut, a Twoja witryna zacznie działać.',
+                '.help_button': 'Jak mogę to naprawić?',
+            },
+            'de': {
+                'title': 'Website media.bigmachinegames.com nicht auf Server konfiguriert',
+                'h1': 'Website media.bigmachinegames.com nicht auf Server konfiguriert',
+                '.message1': 'Website <b>media.bigmachinegames.com</b> ist nicht auf dem Hosting-Server konfiguriert.',
+                '.message2': 'Domainadressendatensatz verweist auf unseren Server, aber diese Site wird nicht bedient.<br>Wenn Sie kürzlich eine Site zu Ihrem Control Panel hinzugefügt haben, warten Sie 15 Minuten und Ihre Site wird funktionieren.',
+                '.help_button': 'Wie kann ich das beheben?',
+            },
+            'uk': {
+                'title': 'Сайт media.bigmachinegames.com не налаштований на сервері',
+                'h1': 'Сайт media.bigmachinegames.com не налаштований на сервері',
+                '.message1': 'Сайт <b>media.bigmachinegames.com</b> не налаштований на сервері хостингу.',
+                '.message2': 'Адресний запис домену посилається на наш сервер, але цей сайт не обслуговується.<br>Якщо Ви недавно додали сайт до панелі керування - зачекайте 15 хвилин і ваш сайт почне працювати.',
+                '.help_button': 'Як це виправити?',
+            },
+            'cn': {
+                'title': '网站 media.bigmachinegames.com 未在服务器上配置',
+                'h1': '网站 media.bigmachinegames.com 未在服务器上配置',
+                '.message1': '网站 <b>media.bigmachinegames.com</b> 未在托管服务器上配置。',
+                '.message2': '域地址记录指向我们的服务器，但此站点未提供服务。<br>如果您最近在控制面板中添加了站点 - 等待 15 分钟，您的站点将开始工作。',
+                '.help_button': '我该如何解决这个问题？',
+            },
+            'ru': {
+                'title': 	 'Сайт media.bigmachinegames.com не настроен на сервере',
+                'h1': 		 'Сайт media.bigmachinegames.com не настроен на сервере',
+                '.message1': 'Сайт <b>media.bigmachinegames.com</b> не настроен на сервере хостинга.',
+                '.message2': 'Адресная запись домена ссылается на наш сервер, но этот сайт не обслуживается.<br>Если Вы недавно добавили сайт в панель управления - подождите 15 минут и ваш сайт начнет работать.',
+                '.help_button': 'Как это исправить?',
+            }
+        };
+
+        function display(){
+            let default_lang = 'en',
+                    browser_lang = window.navigator.language || navigator.userLanguage,
+                    lang = '';
+
+            browser_lang = browser_lang.substr(0, 2).toLowerCase();
+
+            if( window.languages.hasOwnProperty(browser_lang) ){
+                lang = browser_lang;
+            }else{
+                lang = default_lang;
+            }
+
+            for (let key in window.languages[lang]){
+                if(undefined !== document.querySelector(key)){
+                    document.querySelector(key).innerHTML = window.languages[lang][key];
+                }
+            }
+
+            return false;
+        }
+
+        document.addEventListener("DOMContentLoaded", display);
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+
+        <div class="text">
+            <h1>Сайт media.bigmachinegames.com не настроен на сервере</h1>
+			
+            <p class="message1">Сайт <b>media.bigmachinegames.com</b> не настроен на сервере хостинга.</p>
+            
+            <p class="message2">
+                Адресная запись домена ссылается на наш сервер, но этот сайт не обслуживается.<br>
+                Если Вы недавно добавили сайт в панель управления - подождите 15 минут и ваш сайт начнет работать.
+            </p>
+            
+            <a class="help_button" href="https://www.ukraine.com.ua/wiki/hosting/errors/site-not-served/">
+                Как это исправить?
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <span style='color:gray'>Server web247</span>
+    </div>
+
+</div>
+</body>
+</html>

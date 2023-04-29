@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta id="myViewport" name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ИНФОТЕХ">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="315">
+  <link rel="stylesheet" id="mainstyles" href="./css/main.css" type="text/css" media="all">
+  <title>ООО "ИНФОТЕХ"</title>
+  <meta name="twitter:title" content="ИНФОТЕХ">
+  <meta name="description" content="АУТСОРСИНГ РАЗРАБОТКИ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ">
+  <meta name="twitter:description" content="АУТСОРСИНГ РАЗРАБОТКИ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ">
+  <meta property="og:description" content="АУТСОРСИНГ РАЗРАБОТКИ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ">
+  <meta property="og:url" content="https://infotex.pages.dev">
+  <meta name="robots" content="max-image-preview:large">
+</head>
+
+<body>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div class="scene">
+    <div class="cube show-front">
+      <div class="cube__face cube__face--front">
+        <div class="glav">
+          <h1>ООО "ИНФОТЕХ"</h1>
+          <br>
+          <div style="width:70%;margin: 0 auto">АУТСОРСИНГ РАЗРАБОТКИ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ</div>
+        </div>
+      </div>
+      <div class="cube__face cube__face--back">
+        <div class="kod">
+          <p class="using">BMGEngine;</p>
+          <p class="using">BMGEngine.AI;</p>
+          <p class="using">System.Collections;</p>
+          <br>
+          <p><span class="red">public class</span> <span class="fat">ShootingTank</span><br>
+            {</p><br>
+          <p> <span class="red"> private float</span> shootingDelay = 0.7f;</p>
+          <p> <span class="red"> public</span> GameObject tankShell</p>
+          <br>
+          <p> <span class="red"> public void</span> <span class="fat">Start()</span><br>{</p>
+          <p id="koding"></p>
+          <p> }</p>
+          <p>}</p>
+        </div>
+      </div>
+      <div class="cube__face cube__face--right">
+        <div class="marketing">
+          <div id="chart">
+          </div>
+        </div>
+      </div>
+      <div class="cube__face cube__face--left">
+        <div class="artbox">
+          <p style="position: relative;bottom: -15%">ГРАФИКА И АНИМАЦИЯ<br>В 2D и 3D</p>
+          <img loading="lazy" decoding="async" src="./img/tank_animated.gif" class="art">
+        </div>
+      </div>
+      <div class="cube__face cube__face--top">
+        <div class="marketing">
+          <div id="chart2">
+          </div>
+        </div>
+      </div>
+      <div class="cube__face cube__face--bottom">
+        <div class="contacts">
+          <p>Услуги по разработки программного обеспечения<br>
+            ООО "ИНФОТЕХ"<br><br>
+            ОГРНИП 317784700244551<br>
+            ИНН 780157927749
+          </p><br>
+          <p style="color:red"> infotexllc@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="radio-group">
+    <label style="display:none">
+      <input type="radio" name="rotate-cube-side" id="front" value="front" checked=""> ГЛАВНАЯ </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" value="left"> ГРАФИКА </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" onclick="typeWriter()" value="back"> КОД </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" onclick="drawChart()" value="right"> МАРКЕТИНГ </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" onclick="drawChart2()" id="top" value="top"> ДИЗАЙН </label>
+    <label>
+      <input type="radio" name="rotate-cube-side" value="bottom"> КОНТАКТЫ </label>
+  </p>
+  <script>
+    var cube = document.querySelector('.cube');
+    var radioGroup = document.querySelector('.radio-group');
+    var currentClass = '';
+    var body = document.getElementsByTagName('body')[0];
+    body.style.background = "#f2f2f2";
+    body.style.paddingTop = (window.innerHeight / 9) + "px";
+
+    function changeSide() {
+      var checkedRadio = radioGroup.querySelector(':checked');
+      var showClass = 'show-' + checkedRadio.value;
+      if (currentClass) {
+        cube.classList.remove(currentClass);
+      }
+      cube.classList.add(showClass);
+      currentClass = showClass;
+    }
+
+    changeSide();
+
+    radioGroup.addEventListener('change', changeSide);
+  </script>
+  <script>
+    var i = 0;
+    var txt = "//Разрабатываем мобильные и десктопные приложения на C#, C++. Python, PHP и JS! "; /* The text */
+    var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+    function typeWriter() {
+      if (i < txt.length && radioGroup.querySelector(':checked').value == 'back') {
+        document.getElementById("koding").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else if (radioGroup.querySelector(':checked').value != 'back') {
+        i = 0;
+        document.getElementById("koding").innerHTML = '';
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Направления", "Влияние"],
+        ["Исследования", 3],
+        ["Каналы Продаж", 8],
+        ["Креативы", 4],
+        ["Реклама", 7],
+        ["Аналитика", 5]
+      ]);
+
+      var options = {
+        title: "ИССЛЕДОВАНИЯ И ПРОДВИЖЕНИЕ",
+        is3D: true,
+        legend: { position: 'bottom', alignment: 'center' },
+        fontName: 'Roboto'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['sankey'] });
+    google.charts.setOnLoadCallback(drawChart2);
+
+    function drawChart2() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', "Цели");
+      data.addColumn('string', "Способы");
+      data.addColumn('number', "Влияние");
+      data.addRows([
+        ["Монетизация", "Магазин", 5],
+        ["Удержание", "Ежедневные Награды", 7],
+        ["Монетизация", "Спецпредложения", 6],
+        ["Монетизация", "Интересные механики", 6],
+        ["Удержание", "Пуш-нотификации", 2],
+        ["Удержание", "Социальные Функции", 9],
+        ["Монетизация", "Социальные Функции", 9],
+        ["Удержание", "Интересные механики", 4],
+        ["Удержание", "Спецпредложения", 2],
+        ["Монетизация", "Пуш-нотификации", 1],
+      ]);
+      var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+        '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+
+      // Sets chart options.
+      var options = {
+        fontName: 'Roboto',
+        sankey: {
+          node: {
+            colors: colors,
+            label: { fontSize: 11 },
+          },
+          link: {
+            colorMode: 'gradient',
+            colors: colors
+          }
+        }
+      };
+
+      // Instantiates and draws our chart, passing in some options.
+      var chart = new google.visualization.Sankey(document.getElementById('chart2'));
+      chart.draw(data, options);
+    }
+  </script>
+</body>
+
+</html>
